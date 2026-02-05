@@ -1,0 +1,22 @@
+[package]
+name = "hot_dog"
+version = "0.1.0"
+authors = ["Andreas Pauley <andreas@pauley.org.za>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dioxus = { version = "0.7.2", features = ["fullstack", "router"] }
+reqwest = { version = "0.12.26", features = ["json"] }
+serde = { version = "1.0.228", features = ["derive"] }
+tokio = { version = "1.48", features = ["rt-multi-thread", "macros", "sync"], optional = true }
+tokio-postgres = { version = "0.7.12", optional = true }
+toml = { version = "0.8.19", optional = true }
+
+[features]
+default = []
+web = ["dioxus/web"]
+desktop = ["dioxus/desktop"]
+mobile = ["dioxus/mobile"]
+server = ["dioxus/server", "dep:tokio", "dep:tokio-postgres", "dep:toml"]

@@ -1,0 +1,6 @@
+[postgres]
+host = "222.30.195.176"
+port = 15432
+user = "postgres"
+password = "123.com"
+dbname = "postgres"
