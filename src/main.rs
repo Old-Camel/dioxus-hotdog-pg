@@ -4,7 +4,7 @@ mod components;
 use components::{DogView, Favorites, NavBar};
 use dioxus::prelude::*;
 
-const MAIN_CSS: Asset = asset!("/assets/main.css");
+const MAIN_CSS: Asset = asset!("/assets/tailwind.css");
 
 #[derive(Routable, Clone, PartialEq)]
 enum Route {

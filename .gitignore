@@ -9,3 +9,5 @@
 /hotdog.db
 .idea
 .claude
+/node_modules/
+/dioxus-hot-dog.iml
